@@ -1,0 +1,91 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="CustomTheme" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="dialog_default_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFrame">@null</item>
+    </style>
+
+
+    <style name="dialog_custom_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+    </style>
+
+
+    <style name="OnePxActivityStyle" parent="CustomTheme">
+        <!-- 窗体背景颜色为透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 窗体没有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 窗体不包含标题栏 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 窗体悬浮 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 自定义TitleBar时去掉多余的阴影-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 不允许窗体背景变暗-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 窗体切换无动画-->
+        <item name="android:windowAnimationStyle">@null</item>
+        <!-- 禁用窗口的预览动画-->
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowNoDisplay">false</item>
+    </style>
+
+
+    <color name="transparent">#00000000</color>
+
+
+    <!--&lt;!&ndash; 控制app背景色 format:颜色值、资源引用 &ndash;&gt;-->
+    <!--<attr name="custom_attr_app_bg" format="color|reference" />-->
+    <!--&lt;!&ndash; 控制app标题栏背景色 format:颜色值、资源引用 &ndash;&gt;-->
+    <!--<attr name="custom_attr_app_title_bg" format="color|reference" />-->
+    <!--&lt;!&ndash; 控制app内容区背景色 format:颜色值、资源引用 &ndash;&gt;-->
+    <!--<attr name="custom_attr_app_content_bg" format="color|reference" />-->
+    <!--&lt;!&ndash; 控制app内容区分割线颜色 format:颜色值、资源引用 &ndash;&gt;-->
+    <!--<attr name="custom_attr_app_content_div" format="color|reference" />-->
+    <!--&lt;!&ndash; 控制按钮背景色 format:颜色值、资源引用 &ndash;&gt;-->
+    <!--<attr name="custom_attr_btn_bg" format="color|reference" />-->
+    <!--&lt;!&ndash; 控制按钮上的字体颜色 format:颜色值、资源引用 &ndash;&gt;-->
+    <!--<attr name="custom_attr_btn_text" format="color|reference" />-->
+    <!--&lt;!&ndash; 控制副文本字体颜色，如：提示、描述 format:颜色值、资源引用 &ndash;&gt;-->
+    <!--<attr name="custom_attr_text_sub" format="color|reference" />-->
+    <!--&lt;!&ndash; 控制主文本字体颜色，如：标题、标签 format:颜色值、资源引用 &ndash;&gt;-->
+    <!--<attr name="custom_attr_text_main" format="color|reference|" />-->
+    <!--&lt;!&ndash; CheckBox背景色 format:颜色值、资源引用 &ndash;&gt;-->
+    <!--<attr name="custom_attr_cb_bg" format="reference" />-->
+    <!--&lt;!&ndash; CheckBox指示器颜色 format:颜色值、资源引用 &ndash;&gt;-->
+    <!--<attr name="custom_attr_cb_bg" format="reference" />-->
+    <!--&lt;!&ndash; 首页大标题颜色 format:颜色值、资源引用 &ndash;&gt;-->
+    <!--<attr name="custom_attr_title_main" format="color|reference" />-->
+    <!--&lt;!&ndash; 占位Drawable format:颜色值、资源引用 &ndash;&gt;-->
+    <!--<attr name="custom_attr_place_holder" format="color|reference" />-->
+
+
+</resources>

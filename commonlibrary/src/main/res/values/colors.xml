@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--#0398db-->
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/transparent</color>
+    <color name="colorAccent">@color/white</color>
+
+
+    <color name="base_color_text_blue">#2457d6</color>
+    <color name="base_color_text_white">#ffffff</color>
+    <color name="base_color_text_black">#232121</color>
+
+
+    <!--<color name="custom_color_app_bg">#FF171717</color>-->
+    <!--<color name="custom_color_app_title_bg">#FF191919</color>-->
+    <!--<color name="custom_color_app_content_bg">#ff343a49</color>-->
+    <!--<color name="custom_color_text_main">#FF999999</color>-->
+    <!--<color name="custom_color_text_sub">#FF666666</color>-->
+    <!--<color name="custom_color_app_content_div">#FF191919</color>    -->
+
+    <!--#FFF6F8FA     公共的#ECF1F5  -->
+    <color name="custom_color_app_bg">#F0F5F8</color>
+    <color name="custom_color_app_title_bg">#ffffffff</color>
+    <color name="custom_color_text_main">@color/black</color>
+
+    <!-- app内容区分割线颜色 -->
+    <!-- 副文本（提示、描述）字体颜色 -->
+
+
+    <!--<color name="custom_color_app_bg">#FF171717</color>      &lt;!&ndash; app背景色 &ndash;&gt;-->
+    <!--&lt;!&ndash;#ff2a2e3a&ndash;&gt;-->
+    <!--<color name="custom_color_app_title_bg">#FF818181</color>      &lt;!&ndash; app标题栏背景色 &ndash;&gt;-->
+    <!--&lt;!&ndash;#FF1D1D1D&ndash;&gt;-->
+    <!--<color name="custom_color_app_content_bg">#ff343a49</color>      &lt;!&ndash; app内容区背景色 &ndash;&gt;-->
+
+    <!-- 文本相关 -->
+    <!-- 副文本（提示、描述）字体颜色 -->
+    <!-- 副文本（提示、描述）字体颜色 -->
+    <!-- 主文本（标题、标签）字体颜色 -->
+    <!-- 主文本（标题、标签）字体颜色 -->
+
+    <!--按钮相关-->
+    <!-- 按钮正常情况下背景色 -->
+    <!-- 按钮正常情况下背景色 -->
+    <!-- 按钮按住情况下背景色 -->
+    <!-- 按钮按住情况下背景色 -->
+
+    <!--按钮文字相关-->
+    <!-- 按钮文字按住情况下背景色 -->
+    <!-- 按钮文字按住情况下背景色 -->
+    <!-- 按钮文字正常情况下背景色 -->
+    <!-- 按钮文字正常情况下背景色 -->
+
+
+    <!--占位图颜色-->
+    <!-- 占位drawable背景颜色 -->
+    <!--占位drawable背景颜色 -->
+
+
+    <!--checkbox-->
+
+    <!--标题字体颜色-->
+
+
+    <!--二级进度条前景色-->
+    颜色
+    <!--一级进度条前景色-->
+    <!--进度条背景-->
+
+
+    <!--seekbar指示器-->
+
+
+</resources>
+

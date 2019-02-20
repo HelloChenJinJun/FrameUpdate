@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- red -->
+
+    <!-- pink -->
+
+    <!-- purple -->
+
+    <!-- deep_purple -->
+
+    <!-- indigo -->
+
+    <!-- blue -->
+
+    <!-- light_blue -->
+
+    <!-- cyan -->
+
+    <!-- teal -->
+
+    <!-- green -->
+
+    <!-- light_green -->
+
+    <!-- lime -->
+
+    <!-- yellow -->
+
+    <!-- amber -->
+
+    <!-- orange -->
+    <color name="orange_500">#ff9b35</color>
+
+    <!-- deep_orange -->
+
+    <!-- orange_red -->
+    <color name="orange_red_300">#fa6e5f</color>
+
+    <!-- brown -->
+
+    <!-- bule_grey -->
+
+    <!-- grey -->
+    <color name="grey_300">#b3b3b3</color>
+
+
+    <!-- light_blue_transparency -->
+
+    <!-- green_transparency -->
+
+    <!-- cyan_transparency -->
+
+    <!-- black_transparency -->
+    <!--<color name="transparent">#00000000</color>-->
+    <color name="black_transparency_500">#80000000</color>
+    <color name="black_transparency_700">#B4000000</color>
+    <color name="black">#FF000000</color>
+
+    <!-- white_transparency -->
+    <color name="white">#FFffffff</color>
+
+
+</resources>

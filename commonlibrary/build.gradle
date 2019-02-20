@@ -1,0 +1,176 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.greenrobot.greendao'
+
+//apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    api rootProject.ext.dependencies.design
+    api(rootProject.ext.dependencies.support_v4) {
+        exclude module: "support-annotations"
+    }
+
+
+    api 'com.danikula:videocache:2.7.1'
+
+    api rootProject.ext.dependencies.annotations
+    api rootProject.ext.dependencies.rxjava2
+    api(rootProject.ext.dependencies.rxjava2_android) {
+        exclude module: "rxjava"
+    }
+    api(rootProject.ext.dependencies.rxlifecycle2) {
+        exclude module: 'rxjava'
+        exclude module: 'jsr305'
+    }
+    api(rootProject.ext.dependencies.rxlifecycle2_components) {
+        exclude module: 'support-v4'
+        exclude module: 'appcompat-v7'
+        exclude module: 'support-annotations'
+        exclude module: 'rxjava'
+        exclude module: 'rxandroid'
+        exclude module: 'rxlifecycle'
+    }
+    api(rootProject.ext.dependencies.retrofit) {
+        exclude module: 'okhttp'
+        exclude module: 'okio'
+    }
+    api(rootProject.ext.dependencies.retrofit_converter_gson) {
+        exclude module: 'gson'
+        exclude module: 'okhttp'
+        exclude module: 'okio'
+        exclude module: 'retrofit'
+    }
+    api(rootProject.ext.dependencies.retrofit_adapter_rxjava2) {
+        exclude module: 'rxjava'
+        exclude module: 'okhttp'
+        exclude module: 'retrofit'
+        exclude module: 'okio'
+    }
+    implementation('com.komi.slider:slider:0.4.0') {
+        exclude module: "support-v4"
+        exclude module: "support-core-ui"
+        exclude module: "support-compat"
+        exclude module: "appcompat-v7"
+        exclude module: "recyclerview-v7"
+    }
+
+    api('com.github.chrisbanes:PhotoView:2.3.0') {
+        exclude module: "support-v4"
+        exclude module: "support-compat"
+        exclude module: 'rxjava'
+        exclude module: 'retrofit'
+        exclude module: 'appcompat-v7'
+        exclude module: 'support-v4'
+        exclude module: 'support-annotations'
+        exclude module: 'support-core-utils'
+        exclude module: 'support-media-compat'
+        exclude module: 'support-vector-drawable'
+        exclude module: 'support-fragment'
+        exclude module: 'multidex'
+        exclude module: 'rxandroid'
+        exclude module: 'gson'
+        exclude module: 'okio'
+    }
+
+    //    字体库
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+    //    bugly
+    api 'com.tencent.bugly:crashreport_upgrade:1.3.4'
+    api 'com.tencent.bugly:nativecrashreport:3.6.0'
+    api(rootProject.ext.dependencies.cardview) {
+        exclude module: "support-v4"
+        exclude module: "support-compat"
+        exclude module: 'rxjava'
+        exclude module: 'retrofit'
+        exclude module: 'appcompat-v7'
+        exclude module: 'support-v4'
+        exclude module: 'support-annotations'
+        exclude module: 'support-core-utils'
+        exclude module: 'support-media-compat'
+        exclude module: 'support-vector-drawable'
+        exclude module: 'support-fragment'
+        exclude module: 'multidex'
+        exclude module: 'rxandroid'
+        exclude module: 'gson'
+        exclude module: 'okio'
+
+    }
+    api ('org.jsoup:jsoup:1.10.1'){
+        exclude module:"appcompat-v7"
+        exclude module:"support-v4"
+    }
+    api 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+    api rootProject.ext.dependencies.greenDao
+    api rootProject.ext.dependencies.gson
+    api rootProject.ext.dependencies.glide
+    api rootProject.ext.dependencies.dagger2
+    api(rootProject.ext.dependencies.rxpermission) {
+        exclude module: 'rxjava'
+    }
+    api rootProject.ext.dependencies.retrofit_converter_scalars
+    annotationProcessor rootProject.ext.dependencies.dagger2_compiler
+    api rootProject.ext.dependencies.transformations
+    api 'androidx.multidex:multidex:2.0.0'
+    //    api rootProject.ext.dependencies.arouter_api
+//    api files('libs/nineoldandroids-2.4.0.jar')
+    api 'com.umeng.sdk:common:1.5.3'
+    api 'com.umeng.sdk:analytics:7.5.3'
+    //    walle打包
+    implementation 'com.meituan.android.walle:library:1.1.6'
+    implementation 'com.github.bumptech.glide:annotations:4.8.0'
+    implementation files('libs/pinyin4j-2.5.0.jar')
+//
+//    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.2'
+//    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'
+//    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.2'
+}
+
+
+

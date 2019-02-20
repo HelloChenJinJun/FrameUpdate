@@ -1,0 +1,69 @@
+if (rootProject.ext.isAlone) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+android {
+
+
+
+    signingConfigs {
+        config {
+            keyAlias 'chen'
+            keyPassword '3929249'
+            storeFile file('frame.jks')
+            storePassword '3929249'
+        }
+    }
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+//    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+            applicationId "com.chen.frameupdate"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi', 'armeabi-v7a'//, 'x86', 'x86_64', 'arm64-v8a'
+        }
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.config
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation project(':commonlibrary')
+    testImplementation 'junit:junit:4.12'
+}
+
+if (!rootProject.ext.isAlone) {
+    apply from: 'tinker-support.gradle'
+    apply from: 'multiple-channel.gradle'
+
+}
